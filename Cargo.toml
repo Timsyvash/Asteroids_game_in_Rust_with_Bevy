@@ -1,0 +1,15 @@
+[package]
+name = "Asteroids_game_in_Rust_with_Bevy"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+bevy = { version = "=0.18.0", features = ["webgl2"] }
+rand = "=0.8.5"
+bevy_ios_iap = "0.9.0"
+
+[profile.release]
+lto = true
+opt-level = 3
+codegen-units = 1
+strip = true
